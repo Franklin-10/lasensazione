@@ -1,5 +1,5 @@
 [[redirects]]
   from   = "/api/*"
-  to     = "https://palegreen-ibex-350332.hostingersite.com/wp-json/:splat"
+  to     = "https://palegreen-ibex-350332.hostingersite.com/json/:splat"
   status = 200
   force  = true
