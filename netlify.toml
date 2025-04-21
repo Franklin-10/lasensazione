@@ -1,13 +1,10 @@
-# netlify.toml (raiz do repo)
 
-# 1) JWT‑Auth continua em /wp‑json/jwt-auth/v1
 [[redirects]]
-  from   = "/api/jwt-auth/v1/*"
-  to     = "https://palegreen-ibex-350332.hostingersite.com/wp-json/jwt-auth/v1/:splat"
+  from   = "/jwt-auth/v1/*"
+  to     = "https://palegreen-ibex-350332.hostingersite.com/jwt-auth/v1/:splat"
   status = 200
   force  = true
 
-# 2) Suas rotas customizadas (change_api já as expõe em /json/api)
 [[redirects]]
   from   = "/api/*"
   to     = "https://palegreen-ibex-350332.hostingersite.com/json/api/:splat"
