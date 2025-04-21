@@ -1,9 +1,4 @@
-export const API_URL = import.meta.env.VITE_API_URL || '/api/json';
-
-export const endpoints = {
-  POSTS: () => `${API_URL}/api/json`,
-  // ou outras rotas: `${BASE_URL}/wp-json/...`
-};
+export const API_URL = import.meta.env.VITE_API_URL || '';
 
 export function TOKEN_POST(body) {
   return {
