@@ -1,4 +1,9 @@
-
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+  force  = true
+  
 [[redirects]]
   from   = "/api/jwt-auth/v1/*"
   to     = "https://palegreen-ibex-350332.hostingersite.com/json/jwt-auth/v1/:splat"
