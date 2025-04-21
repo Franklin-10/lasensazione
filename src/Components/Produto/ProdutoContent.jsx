@@ -19,7 +19,6 @@ const ProdutoContent = ({ data }) => {
   const { error, loading, request } = useFetch();
   const id = produto.id;
   const mobile = useMedia('(max-width: 50rem)');
-  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -32,7 +31,7 @@ const ProdutoContent = ({ data }) => {
     const token = window.localStorage.getItem('token');
     const { url, options } = CARDAPIO_UPDATE(id, formData, token);
     const { response } = await request(url, options);
-    if (response.ok) navigate('/conta');
+    if (response.ok) window.location.reload();
   }
 
   function handleImageChange({ target }) {
