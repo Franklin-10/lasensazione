@@ -2,7 +2,7 @@ export const API_URL = 'https://palegreen-ibex-350332.hostingersite.com/json';
 
 export function TOKEN_POST(body) {
   return {
-    url: API_URL + 'api/jwt-auth/v1/token',
+    url: API_URL + '/api/jwt-auth/v1/token',
     options: {
       method: 'POST',
       headers: {
