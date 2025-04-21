@@ -1,0 +1,32 @@
+.section{
+  display: flex;
+  max-width: max-content;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.div{
+  display: flex;
+}
+
+.img{
+  max-width: 200px;
+  padding: 0 1rem;
+  max-height: 8rem;
+}
+img:nth-child(0){
+  padding-right: 0 !important;
+}
+.galeria{
+  max-width: 600px;
+}
+
+@media (max-width: 50rem) {
+  .img{
+    padding: 0
+
+  }
+}
+
+

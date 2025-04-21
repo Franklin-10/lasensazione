@@ -1,0 +1,92 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  flex-direction: column;
+  justify-items: center;
+  padding: 3rem 0 !important;
+}
+.h1{
+  grid-area: 1 / 1 / span 1 /span 2;
+}
+.carrossel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: 3 / 1 /span 1 / span 1;
+  justify-self: baseline;
+  overflow: hidden;
+
+}
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+.noneCarrossel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: 2 / 1 / span 3/ span 2;
+  overflow: hidden;
+  padding: 1rem;
+}
+.informacoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-area: 2 / 1 / span 1/ span 1;
+  justify-self: baseline;
+}
+
+.informacoes span{
+  color: green;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.Image{
+  grid-area: 2 / 2 / span 3 / span 2;
+  
+}
+.galeria{
+  max-width: 600px;
+}
+
+@media (max-width: 50rem){
+  .section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .carrossel, .informacoes, .noneCarrossel, .Image{
+    grid-area:initial;
+  }
+  .noneCarrossel,  .carrossel{
+    padding: 5px 10px;
+  }
+  .informacoes{
+    align-items: center;
+    justify-self: center;
+  }
+  .informacoes p{
+    text-align: center;
+    width: 40vh;
+  }
+  .informacoes * {
+    padding: 1rem 0;
+  }
+
+  .Image{
+    grid-row: 2;
+    max-width: 80%;
+  }
+
+  .carrossel{
+    justify-self: initial;
+  }
+
+
+}

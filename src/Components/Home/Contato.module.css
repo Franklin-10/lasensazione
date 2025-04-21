@@ -1,0 +1,136 @@
+.section{
+  background-color: #EFD6BD;
+  padding: 2rem 0 !important;
+}
+.div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.div p{
+  max-width: 160px;
+}
+
+.h1{
+  justify-self: center;
+}
+.div h3{
+   margin-bottom: 5px !important;
+  }
+.titulo{
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.dados{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.horario{
+  grid-area: 1 / 1 / 1 / 1;
+}
+.horario h3{display: flex;gap: .3rem;}
+.horario h3::before{
+  content: '';
+  display: block;
+  background-image: url('../../Assets/relogio-icon.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+
+}
+
+.contato{
+  grid-area: 1 / 2 / 1 / 2;
+}
+.contato h3{display: flex;gap: .3rem;}
+.contato h3::before{
+  content: '';
+  display: block;
+  background-image: url('../../Assets/email-icon.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+
+}
+
+.endereco{
+  grid-area: 2 / 1 / 2 / span 2;  
+}
+.endereco h3{
+  margin: 0 40%;
+  display: flex;gap: .3rem;
+}
+.endereco h3::before{
+  content: '';
+  display: block;
+  background-image: url('../../Assets/localizacao-icon.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+
+}
+.endereco p{
+  max-width: fit-content;
+}
+
+.mapa{
+  grid-area: 3 / 1 / 3 / span 2;
+}
+
+.whatsapp{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.whatsapp h3{display: flex;gap: .3rem;}
+.whatsapp h3::before{
+  content: '';
+  display: block;
+  background-image: url('../../Assets/tel-icon.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+
+}
+
+@media (max-width: 50rem) {
+  .div{
+    display: flex;
+    flex-direction: column;
+  }
+  .dados{
+    justify-items: center;
+    grid-template-columns: 1fr;
+    align-items: center; 
+
+  }
+  .dados h3 {
+    justify-content: center;
+  }
+  .horario,
+  .contato,
+  .endereco,
+  .mapa {
+
+     grid-area: auto;
+     text-align: center;
+  }
+  .endereco h3 {
+    margin: 0; 
+  }
+  .contato p{
+    max-width: initial;
+  }
+}

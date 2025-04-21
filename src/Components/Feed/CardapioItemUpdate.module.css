@@ -1,0 +1,12 @@
+@import url('./CardapioItem.module.css');
+
+.descricao svg{
+  stroke: white;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  margin: 10px 0 0 10px;
+}
+
+

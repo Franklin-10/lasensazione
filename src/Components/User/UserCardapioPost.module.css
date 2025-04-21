@@ -1,0 +1,31 @@
+.section{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+form input {
+  padding: 2rem 0;
+}
+
+.preview{
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.preview:after{
+  content: '';
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+@media (max-width: 50rem) {
+  .section{
+    grid-template-columns: 1fr ;
+
+  }
+}

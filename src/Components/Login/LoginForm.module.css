@@ -1,0 +1,27 @@
+.section{
+    display: flex;
+    flex-direction: column;
+}
+.title::after{
+  content: '';
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #FF3019;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+.perdeu{
+margin: 10px 0;
+color:#333;
+font-weight: 700;
+text-decoration:underline;
+}
+
+.perdeu:hover{
+  color: #d22;
+}

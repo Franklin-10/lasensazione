@@ -1,0 +1,44 @@
+.login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.login::before{
+  display: block;
+  content: '';
+  background: url('../../Assets/login.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.forms{
+  max-width: 30rem;
+  padding: 1rem;
+  margin-top: 20vh;
+}
+
+.title::after{
+  content: '';
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #FF3019;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+@media (max-width: 50rem){
+  .login{
+    grid-template-columns: 1fr;
+  }
+  .login:before{
+    display: none;
+  }
+  .forms{
+    max-width: 100%;
+  }
+}

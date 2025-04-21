@@ -1,0 +1,76 @@
+.card{
+  position: relative;
+  margin: 20px 0;
+}
+
+.descricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 0;
+  opacity: 0;
+  transition: 0.8s ease;
+  background: #333;
+  padding: 18px 8%;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+}
+.linha{
+  background-color: #FF301A;
+  width: 7.5rem;
+  height: 0.2rem;
+  margin: .5rem 0;
+}
+
+.card:hover .descricao{
+  opacity: 1;
+  height: 100%;
+}
+
+
+
+@media (max-width: 50rem) {
+  .card, .div{
+    display: grid;
+
+  }
+
+  .div{
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 5rem;
+  }
+
+  .div h2{
+    grid-row: 2;
+    height: 4rem;
+  }
+
+  .linha{
+    margin-top: auto;
+    grid-row: 3;
+  }
+}
+
+
+/* .h2{
+  margin-bottom: 0.5rem; 
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  }
+
+
+.h2::after{
+  content: '';
+  display: block;
+  background-color: #FF301A;
+  width: 7.5rem;
+  height: 0.2rem;
+  z-index: -1;
+  margin: .5rem 0;
+  justify-self: space-between;
+} */
