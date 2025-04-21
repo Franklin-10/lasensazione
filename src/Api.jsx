@@ -1,4 +1,4 @@
-export const API_URL = import.meta.env.VITE_API_URL || '';
+export const API_URL = 'https://palegreen-ibex-350332.hostingersite.com/json';
 
 export function TOKEN_POST(body) {
   return {
