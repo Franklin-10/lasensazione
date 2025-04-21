@@ -1,7 +1,7 @@
 
 [[redirects]]
-  from   = "/jwt-auth/v1/*"
-  to     = "https://palegreen-ibex-350332.hostingersite.com/jwt-auth/v1/:splat"
+  from   = "/api/jwt-auth/v1/*"
+  to     = "https://palegreen-ibex-350332.hostingersite.com/json/jwt-auth/v1/:splat"
   status = 200
   force  = true
 
