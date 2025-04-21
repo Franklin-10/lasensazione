@@ -8,6 +8,7 @@ import Button from '../Forms/Button';
 import ProdutoDelete from './ProdutoDelete';
 import styles from './ProdutoContent.module.css';
 import useMedia from '../../Hooks/useMedia';
+import { useNavigate } from 'react-router-dom';
 
 const ProdutoContent = ({ data }) => {
   const { produto } = data;
@@ -18,6 +19,11 @@ const ProdutoContent = ({ data }) => {
   const { error, loading, request } = useFetch();
   const id = produto.id;
   const mobile = useMedia('(max-width: 50rem)');
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (data) navigate('/conta');
+  }, [data, navigate]);
 
   async function handleSubmit(event) {
     event.preventDefault();
