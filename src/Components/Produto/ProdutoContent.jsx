@@ -21,10 +21,6 @@ const ProdutoContent = ({ data }) => {
   const mobile = useMedia('(max-width: 50rem)');
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    if (data) navigate('/conta');
-  }, [data, navigate]);
-
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData();
@@ -36,7 +32,7 @@ const ProdutoContent = ({ data }) => {
     const token = window.localStorage.getItem('token');
     const { url, options } = CARDAPIO_UPDATE(id, formData, token);
     const { response } = await request(url, options);
-    if (response.ok) window.location.reload();
+    if (response.ok) navigate('/conta');
   }
 
   function handleImageChange({ target }) {
