@@ -19,7 +19,6 @@ const FeedCardapio = ({ page, user, setModalProduto }) => {
     }
     fetchCardapio();
   }, [request, user, page]);
-  console.log(data);
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
