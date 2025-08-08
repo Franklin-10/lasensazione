@@ -1,4 +1,4 @@
-export const API_URL = `/json`;
+export const API_URL = `https://api.lasensazione.franklinoliveira.com/json`;
 
 export function TOKEN_POST(body) {
   return {
