@@ -1,4 +1,4 @@
-export const API_URL = `https://api.lasensazione.franklinoliveira.com/json`;
+export const API_URL = `/api`;
 
 export function TOKEN_POST(body) {
   return {
@@ -92,13 +92,13 @@ export function CARDAPIO_UPDATE(id, formData, token) {
   };
 }
 
-export function PRODUTO_DELETE(id) {
+export function PRODUTO_DELETE(id, token) {
   return {
     url: `${API_URL}/api/cardapio/${id}`,
     options: {
       method: 'DELETE',
       headers: {
-        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+        Authorization: 'Bearer ' + token,
       },
     },
   };
