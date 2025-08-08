@@ -1,4 +1,4 @@
-export const API_URL = 'https://palegreen-ibex-350332.hostingersite.com/json';
+export const API_URL = `/json`;
 
 export function TOKEN_POST(body) {
   return {
