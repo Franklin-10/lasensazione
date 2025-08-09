@@ -92,13 +92,13 @@ export function CARDAPIO_UPDATE(id, formData, token) {
   };
 }
 
-export function PRODUTO_DELETE(id, token) {
+export function PRODUTO_DELETE(id) {
   return {
     url: `${API_URL}/api/cardapio/${id}`,
     options: {
       method: 'DELETE',
       headers: {
-        Authorization: 'Bearer ' + token,
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
     },
   };
